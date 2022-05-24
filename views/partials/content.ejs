@@ -1,0 +1,23 @@
+<section class="blogs">
+    <h1><%= title %></h1>
+<% data.forEach(item=> { %>
+    <div class="blog">
+        <div>
+            <h2>
+                <%= item.title %>
+            </h2>
+            <p>
+                <%= item.content %>
+            </p>
+        </div>
+        <div class="">
+            <p>
+                Post at: <%=item.create_at %>
+            </p>
+            <h3>
+                Posted By: <%=item.name %>
+            </h3>
+        </div>
+    </div>
+    <% }) %>
+</section>

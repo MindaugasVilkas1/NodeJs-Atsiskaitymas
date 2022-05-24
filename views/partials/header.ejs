@@ -1,0 +1,14 @@
+<% if(auth){ %>
+    <nav class="homeNav">
+        <div>
+            <span>Sveiki: </span>
+            <a href="myBlogs"><input type="submit" value="My Blogs"></a>
+            <a href="/logout"><input id="logout" type="submit" value="log out"></a>
+        </div>
+        <% } else{ %>
+            <div class="logAndReg">
+                <a href="/register">REGISTER</a>
+                <a href="/login">LOGIN</a>
+            </div>
+    </nav>
+    <% } %>

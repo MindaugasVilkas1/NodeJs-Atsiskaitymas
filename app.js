@@ -6,6 +6,8 @@ import routerApiUsers from './routes/api/users.js'
 import routerApiUsersId from './routes/api/users_id.js'
 import routerApiBlogs from './routes/api/blog.js'
 import routerApiBlogId from './routes/api/blog_id.js'
+import routerHome from './routes/ui/home.js'
+import routerRegister from './routes/ui/register.js'
 
 const app = express();
 const PORT = process.env.PORT || 8000
@@ -20,9 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.resolve('public')));
 
-app.get('/', (req, res)=>{
-    res.send("Serveris veikia")
-})
+app.use('/register', routerRegister)
+app.use('/', routerHome)
 app.use('/api/blog/id/', routerApiBlogId)
 app.use('/api/blog', routerApiBlogs)
 app.use('/api/users/id', routerApiUsersId )
