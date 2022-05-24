@@ -5,7 +5,7 @@ document.querySelectorAll('.deleteBtn').forEach(item => {
         fetch(`http://localhost:3000/api/blog/id/${id}`,{
             method: 'DELETE'
         })
-       .then(location.replace('/'))
+       .then(location.reload())
        
     })
 });

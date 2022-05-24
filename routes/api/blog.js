@@ -32,14 +32,5 @@ routerApiBlogs.post('/', isAuthed, async(req, res)=>{
     }
 })
 
-routerApiBlogs.delete('/:id',isAuthed, async(req, res) =>{
-    try{
-         const [data] = await connect.query(`DELETE FROM blog WHERE id = ?`, [req.params.id])
-         res.send(data)
-    } catch (err){
-        res.send({err})
-    }
-});
-
 
 export default routerApiBlogs

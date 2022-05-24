@@ -1,0 +1,19 @@
+<form class="sortForm" action="/" method="get">
+    <div>
+        <label for="sort">Sorting By</label><br>
+        <select name="sortBy">
+            <option value="null">---</option>
+            <option value="title">Sort By title</option>
+            <option value="create_at">Sort by date of creation</option>
+        </select>
+    </div>
+    <div>
+        <label for="increasingDecreasing">Sort ASC/DESC</label><br>
+        <select name="sortAscDesc">
+            <option value="increasing">ASC</option>
+            <option value="decreasing">DESC</option>
+        </select>
+    </div>
+    <div class="submit">
+        <input type="submit" value="Sort">
+    </div>
