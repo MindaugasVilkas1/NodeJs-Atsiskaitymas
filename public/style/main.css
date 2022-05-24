@@ -55,3 +55,26 @@ body{
     margin-top: 20px;
     width: 90%;
 }
+.loginForm{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    background-color: rgb(236, 227, 216);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.loginForm label{
+    font-size:1.5rem;
+}
+.loginForm input{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+  
+}
+.loginTitle{
+    text-align: center;
+}
