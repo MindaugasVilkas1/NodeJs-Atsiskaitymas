@@ -16,8 +16,8 @@
                 Posted By: <%=item.name %>
             </h3>
         </div>
-        <div>
-            <a href="/api/blog/<%= item.id %>"><input class="deleteBtn" type="submit" value="Delete"></a>
+        <div class="delete">
+            <button class="deleteBtn" id="<%= item.id %>">Delete</button>
         </div>
     </div>
     <% }) %>
