@@ -9,6 +9,7 @@ import routerApiBlogId from './routes/api/blog_id.js'
 import routerHome from './routes/ui/home.js'
 import routerRegister from './routes/ui/register.js'
 import routerLogin from './routes/ui/login.js'
+import routerLogout from './routes/ui/logout.js'
 
 const app = express();
 const PORT = process.env.PORT || 8000
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.resolve('public')));
 
+app.use('/logout', routerLogout)
 app.use('/login', routerLogin)
 app.use('/register', routerRegister)
 app.use('/', routerHome)
