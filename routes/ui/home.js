@@ -8,7 +8,7 @@ routerHome.get('/', async(req, res) =>{
     try{
         const auth = await isLogedIn(req)
         const [data] = await connect.query(`
-        SELECT blog.title, blog.content, blog.author_id, blog.create_at, user.id, user.name
+        SELECT blog.title, blog.content, blog.author_id, blog.create_at, user.id, user.name, user.email
         FROM blog
         JOIN blogs.user
         ON user.id=blog.author_id
@@ -16,7 +16,9 @@ routerHome.get('/', async(req, res) =>{
         res.render('home', {
             title: 'The Unpretentious Guide To Luxury Travel',
             data:data,
-            auth: auth
+            auth: auth,
+            token:req.token,
+            css:'main.css'
         })
     }catch (err){
         console.log(err)

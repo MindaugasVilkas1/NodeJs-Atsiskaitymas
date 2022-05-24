@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/head')%>
+</head>
+<body>
+    <nav class="homeNav">
+        <div>
+            <span>Sveiki: <%=vartotojas%></span><br>
+            <a href="/"><input type="submit" value="home"></a>
+            <a href="/logout"><input id="logout" type="submit" value="log out"></a>
+        </div>
+    </nav>
+    <section class="blogs">
+        <%- include('partials/userContent')%>
+    </section>
+</body>
+</html>

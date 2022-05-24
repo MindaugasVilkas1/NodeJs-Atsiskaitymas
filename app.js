@@ -10,6 +10,7 @@ import routerHome from './routes/ui/home.js'
 import routerRegister from './routes/ui/register.js'
 import routerLogin from './routes/ui/login.js'
 import routerLogout from './routes/ui/logout.js'
+import routerUser from './routes/ui/user.js'
 
 const app = express();
 const PORT = process.env.PORT || 8000
@@ -32,4 +33,5 @@ app.use('/api/blog/id/', routerApiBlogId)
 app.use('/api/blog', routerApiBlogs)
 app.use('/api/users/id', routerApiUsersId )
 app.use('/api/users', routerApiUsers)
+app.use('/user/', routerUser)
 app.listen(PORT, () => console.log (`Server running on ${PORT} porto`))

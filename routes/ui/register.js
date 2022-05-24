@@ -7,6 +7,7 @@ const routerRegister = express.Router();
 routerRegister.get('/', (req, res) => {
     res.render('register',{
         title: 'Registration Form',
+        css:'main.css'
     })
 });
 

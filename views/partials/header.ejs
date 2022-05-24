@@ -1,8 +1,7 @@
 <% if(auth){ %>
-    <nav class="homeNav">
         <div>
-            <span>Sveiki prisijungę: </span><br>
-            <a href="myBlogs"><input type="submit" value="My Blogs"></a>
+            <span>Sveiki prisijungę:<%= token.email %> </span><br>
+            <a href="user/<%= token.id %>"><input type="submit" value="My Blogs"></a>
             <a href="/logout"><input id="logout" type="submit" value="log out"></a>
         </div>
         <% } else{ %>
@@ -10,5 +9,4 @@
                 <a href="/register">REGISTER</a>
                 <a href="/login">LOGIN</a>
             </div>
-    </nav>
     <% } %>

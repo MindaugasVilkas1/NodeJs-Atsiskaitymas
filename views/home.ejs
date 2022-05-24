@@ -6,8 +6,15 @@
 </head>
 
 <body>
-    <%- include('partials/header') %>
-    <%- include('partials/content')%>
+    <nav class="homeNav">
+        <%- include('partials/header') %>
+    </nav>
+    <h1>
+        <%= title %>
+    </h1>
+    <section class="blogs">
+        <%- include('partials/content')%>
+    </section>
 </body>
 
 </html>
