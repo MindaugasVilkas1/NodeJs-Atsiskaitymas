@@ -1,5 +1,5 @@
 <% data.forEach(item=> { %>
-    <div class="blog">
+    <div class="blog" id="<%= item.id %>">
         <div>
             <h2>
                 <%= item.title %>
@@ -17,7 +17,7 @@
             </h3>
         </div>
         <div>
-            <a href=""><input type="submit" value="Delete"></a>
+            <a href="/api/blog/<%= item.id %>"><input class="deleteBtn" type="submit" value="Delete"></a>
         </div>
     </div>
     <% }) %>

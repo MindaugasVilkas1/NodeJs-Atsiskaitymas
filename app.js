@@ -20,10 +20,11 @@ app.set('views', path.resolve('views'));
 app.set('view engine', 'ejs');
 
 //cookie parser and express json
+app.use(express.static(path.resolve('public')));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.resolve('public')));
+
 
 app.use('/logout', routerLogout)
 app.use('/login', routerLogin)
@@ -33,5 +34,5 @@ app.use('/api/blog/id/', routerApiBlogId)
 app.use('/api/blog', routerApiBlogs)
 app.use('/api/users/id', routerApiUsersId )
 app.use('/api/users', routerApiUsers)
-app.use('/user/', routerUser)
+app.use('/user', routerUser)
 app.listen(PORT, () => console.log (`Server running on ${PORT} porto`))
